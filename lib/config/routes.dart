@@ -7,6 +7,7 @@ class Routes {
   static String login = 'login';
   static String setting = 'setting';
   static String search = 'search';
+  static String notification = 'notification';
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
@@ -17,5 +18,6 @@ class Routes {
     router.define(login, handler: loginHandler);
     router.define(setting, handler: settingHandler);
     router.define(search, handler: searchHandler);
+    router.define(notification, handler: notificationhHandler);
   }
 }

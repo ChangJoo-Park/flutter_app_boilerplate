@@ -87,7 +87,11 @@ class __HomeMobileState extends State<_HomeMobile> {
             onPressed: () {
               Navigator.of(context).pushNamed('setting');
             }),
-        IconButton(icon: Icon(Icons.notifications_none), onPressed: () {}),
+        IconButton(
+            icon: Icon(Icons.notifications_none),
+            onPressed: () {
+              Navigator.of(context).pushNamed('notification');
+            }),
       ],
     );
   }

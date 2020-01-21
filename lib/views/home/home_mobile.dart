@@ -64,27 +64,21 @@ class __HomeMobileState extends State<_HomeMobile> {
 
   BottomNavigationBar _buildBottomNavigationBar() {
     return BottomNavigationBar(
-      items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.black),
-            title: Text('홈', style: TextStyle(color: Colors.black))),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.menu, color: Colors.grey),
-            title: Text('카테고리', style: TextStyle(color: Colors.grey))),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.create, color: Colors.grey),
-            title: Text('글쓰기', style: TextStyle(color: Colors.grey))),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.favorite, color: Colors.grey),
-            title: Text('알림', style: TextStyle(color: Colors.grey))),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Colors.grey),
-            title: Text('프로필', style: TextStyle(color: Colors.grey))),
-      ],
-      type: BottomNavigationBarType.fixed,
-      currentIndex: 0,
+      selectedIconTheme: IconThemeData(color: Colors.black),
       fixedColor: Colors.black,
-      onTap: (int index) {},
+      type: BottomNavigationBarType.fixed,
+      currentIndex: widget.viewModel.currentTabIndex,
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.menu), title: Text('Newsfeed')),
+        BottomNavigationBarItem(icon: Icon(Icons.create), title: Text('Write')),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.favorite), title: Text('Alarm')),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.person), title: Text('Profile')),
+      ],
+      onTap: (int index) => widget.viewModel.tabIndex = index,
     );
   }
 }

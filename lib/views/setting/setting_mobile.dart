@@ -31,7 +31,7 @@ class _SettingMobile extends StatelessWidget {
                 SettingsTile(
                   title: 'Phone Number',
                   subtitle: '+82 000-0000-0000',
-                  leading: Icon(Icons.language),
+                  leading: Icon(Icons.phone),
                   onTap: () {},
                 ),
                 SettingsTile(

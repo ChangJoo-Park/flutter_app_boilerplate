@@ -23,10 +23,6 @@ class _HomeDesktop extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        backgroundColor: Colors.amber,
-      ),
     );
   }
 }

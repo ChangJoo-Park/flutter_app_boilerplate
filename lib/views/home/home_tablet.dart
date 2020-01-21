@@ -23,10 +23,6 @@ class _HomeTablet extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        backgroundColor: Colors.indigo,
-      ),
     );
   }
 }

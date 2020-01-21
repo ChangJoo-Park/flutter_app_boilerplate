@@ -5,6 +5,8 @@ import './route_handlers.dart';
 class Routes {
   static String root = '/';
   static String login = 'login';
+  static String setting = 'setting';
+
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -12,5 +14,6 @@ class Routes {
     });
     router.define(root, handler: rootHandler);
     router.define(login, handler: loginHandler);
+    router.define(setting, handler: settingHandler);
   }
 }

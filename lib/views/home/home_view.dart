@@ -1,5 +1,7 @@
 library home_view;
 
+import 'package:logger/logger.dart';
+import 'package:program_app/core/logger.dart';
 import 'package:provider_architecture/provider_architecture.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
@@ -14,17 +16,16 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeViewModel viewModel = HomeViewModel();
     return ViewModelProvider<HomeViewModel>.withConsumer(
-      viewModel: viewModel,
-      onModelReady: (viewModel) {
-        // Do something once your viewModel is initialized
-      },
-      builder: (context, viewModel, child) {
-        return ScreenTypeLayout(
-          mobile: _HomeMobile(viewModel),
-          desktop: _HomeDesktop(viewModel),
-          tablet: _HomeTablet(viewModel),  
-        );
-      }
-    );
+        viewModel: viewModel,
+        onModelReady: (viewModel) {
+          // Do something once your viewModel is initialized
+        },
+        builder: (context, viewModel, child) {
+          return ScreenTypeLayout(
+            mobile: _HomeMobile(viewModel),
+            desktop: _HomeDesktop(viewModel),
+            tablet: _HomeTablet(viewModel),
+          );
+        });
   }
 }

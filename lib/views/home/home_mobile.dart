@@ -12,6 +12,30 @@ class _HomeMobile extends StatefulWidget {
 class __HomeMobileState extends State<_HomeMobile> {
   ScrollController _scrollViewController;
   Logger _log = getLogger('HomeMobileView');
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Newsfeed',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: Write',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Notice',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 4: Profile',
+      style: optionStyle,
+    ),
+  ];
 
   @override
   void initState() {
@@ -30,7 +54,9 @@ class __HomeMobileState extends State<_HomeMobile> {
               _buildSliverAppBar(),
             ];
           },
-          body: Container(),
+          body: Center(
+            child: _widgetOptions.elementAt(widget.viewModel.currentTabIndex),
+          ),
         ),
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),

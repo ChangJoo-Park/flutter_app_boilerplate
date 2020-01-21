@@ -1,9 +1,11 @@
 library login_view;
 
+import 'package:program_app/widgets/circle_icon_button.dart';
 import 'package:provider_architecture/provider_architecture.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
 import 'login_view_model.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 part 'login_mobile.dart';
 part 'login_tablet.dart';
@@ -22,9 +24,9 @@ class LoginView extends StatelessWidget {
         return ScreenTypeLayout(
           mobile: _LoginMobile(viewModel),
           desktop: _LoginDesktop(viewModel),
-          tablet: _LoginTablet(viewModel),  
+          tablet: _LoginTablet(viewModel),
         );
-      }
+      },
     );
   }
 }

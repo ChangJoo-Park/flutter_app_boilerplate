@@ -7,8 +7,98 @@ class _LoginMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    double gridHeight = screenSize.height / 12;
+    double blockWidth = screenSize.width;
+
     return Scaffold(
-      body: Center(child: Text('LoginMobile')),
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              _buildAboveContainer(blockWidth, gridHeight),
+              Expanded(
+                child: _buildBottomContainer(context),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container _buildAboveContainer(double blockWidth, double gridHeight) {
+    return Container(
+      width: blockWidth,
+      height: gridHeight * 8,
+      child: Placeholder(),
+    );
+  }
+
+  Container _buildBottomContainer(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          FittedBox(
+            child: Text(
+              'Sign In With',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+            ),
+          ),
+          SizedBox(height: 16.0),
+          _buildSocialLoginRow(context),
+        ],
+      ),
+    );
+  }
+
+  Row _buildSocialLoginRow(BuildContext context) {
+    // TODO: Need handle for login
+    final VoidCallback onTap = () {
+      Navigator.pushReplacementNamed(context, '/');
+    };
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        CircleIconButton(
+          backgroundColor: Colors.red,
+          icon: Icon(
+            AntDesign.google,
+            color: Colors.white,
+          ),
+          onTap: onTap,
+        ),
+        CircleIconButton(
+          backgroundColor: Colors.blueAccent,
+          icon: Icon(
+            AntDesign.facebook_square,
+            color: Colors.white,
+          ),
+          onTap: onTap,
+        ),
+        CircleIconButton(
+          backgroundColor: Colors.deepOrangeAccent,
+          icon: Icon(
+            AntDesign.instagram,
+            color: Colors.white,
+          ),
+          onTap: onTap,
+        ),
+        CircleIconButton(
+          backgroundColor: Colors.blue,
+          icon: Icon(
+            AntDesign.twitter,
+            color: Colors.white,
+          ),
+          onTap: onTap,
+        ),
+      ],
     );
   }
 }

@@ -46,7 +46,7 @@ class _LoginMobile extends StatelessWidget {
         children: <Widget>[
           FittedBox(
             child: Text(
-              'Sign In With',
+              'Sign In With Social Media',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
             ),
           ),
@@ -55,7 +55,10 @@ class _LoginMobile extends StatelessWidget {
           SizedBox(height: 32.0),
           FittedBox(
             child: FlatButton(
-              child: Text('Or with an Email.'),
+              child: Text(
+                'Or with an Email.',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+              ),
               onPressed: () {},
             ),
           ),

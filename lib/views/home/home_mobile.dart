@@ -10,54 +10,31 @@ class _HomeMobile extends StatefulWidget {
 }
 
 class __HomeMobileState extends State<_HomeMobile> {
-  ScrollController _scrollViewController;
   Logger _log = getLogger('HomeMobileView');
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Newsfeed',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Write',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Notice',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Profile',
-      style: optionStyle,
-    ),
-  ];
+  TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  List<Widget> _bottomNavigationOptions;
 
   @override
   void initState() {
+    _bottomNavigationOptions = <Widget>[
+      DashboardView(),
+      NewsfeedView(),
+      Text(
+        'Write. TODO',
+        style: optionStyle,
+      ),
+      NoticeView(),
+      ProfileView()
+    ];
     super.initState();
-    _scrollViewController = ScrollController();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: NestedScrollView(
-          controller: _scrollViewController,
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              _buildSliverAppBar(),
-            ];
-          },
-          body: Center(
-            child: _widgetOptions.elementAt(widget.viewModel.currentTabIndex),
-          ),
-        ),
+      body: Center(
+        child: _bottomNavigationOptions
+            .elementAt(widget.viewModel.currentTabIndex),
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
       floatingActionButton: FloatingActionButton(
@@ -67,32 +44,6 @@ class __HomeMobileState extends State<_HomeMobile> {
         },
         backgroundColor: widget.viewModel.isDebug ? Colors.red : Colors.black,
       ),
-    );
-  }
-
-  SliverAppBar _buildSliverAppBar() {
-    return SliverAppBar(
-      stretch: false,
-      floating: false,
-      pinned: false,
-      title: Text('My App'),
-      actions: <Widget>[
-        IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              Navigator.of(context).pushNamed('search');
-            }),
-        IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {
-              Navigator.of(context).pushNamed('setting');
-            }),
-        IconButton(
-            icon: Icon(Icons.notifications_none),
-            onPressed: () {
-              Navigator.of(context).pushNamed('notification');
-            }),
-      ],
     );
   }
 

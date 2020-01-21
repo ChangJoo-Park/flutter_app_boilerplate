@@ -2,6 +2,10 @@ library home_view;
 
 import 'package:logger/logger.dart';
 import 'package:program_app/core/logger.dart';
+import 'package:program_app/views/dashboard/dashboard_view.dart';
+import 'package:program_app/views/newsfeed/newsfeed_view.dart';
+import 'package:program_app/views/notice/notice_view.dart';
+import 'package:program_app/views/profile/profile_view.dart';
 import 'package:provider_architecture/provider_architecture.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';

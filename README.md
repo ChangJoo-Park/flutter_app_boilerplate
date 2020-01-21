@@ -15,23 +15,23 @@ This boilerplate based on [Flutter MVVM Architecture](https://marketplace.visual
 
 ## ScreenShots
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597901.png?raw=true" width: "300px" />
+<img width= "300px" src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597901.png?raw=true" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597904.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597904.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597906.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597906.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597907.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597907.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597910.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597910.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597911.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597911.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597917.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597917.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597923.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597923.png?raw=true" width= "300px" />
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597928.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597928.png?raw=true" width= "300px" />
 
 
-<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597931.png?raw=true" width: "300px" />
+<img src="https://github.com/ChangJoo-Park/flutter_app_boilerplate/blob/master/screenshots/Screenshot_1579597931.png?raw=true" width= "300px" />

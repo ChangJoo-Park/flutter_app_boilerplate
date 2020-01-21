@@ -74,7 +74,7 @@ class __HomeMobileState extends State<_HomeMobile> {
             icon: Icon(Icons.menu), title: Text('Newsfeed')),
         BottomNavigationBarItem(icon: Icon(Icons.create), title: Text('Write')),
         BottomNavigationBarItem(
-            icon: Icon(Icons.favorite), title: Text('Alarm')),
+            icon: Icon(Icons.favorite), title: Text('Notice')),
         BottomNavigationBarItem(
             icon: Icon(Icons.person), title: Text('Profile')),
       ],

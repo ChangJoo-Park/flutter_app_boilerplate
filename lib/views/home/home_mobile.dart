@@ -51,7 +51,11 @@ class __HomeMobileState extends State<_HomeMobile> {
       pinned: false,
       title: Text('My App'),
       actions: <Widget>[
-        IconButton(icon: Icon(Icons.search), onPressed: () {}),
+        IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              Navigator.of(context).pushNamed('search');
+            }),
         IconButton(
             icon: Icon(Icons.settings),
             onPressed: () {

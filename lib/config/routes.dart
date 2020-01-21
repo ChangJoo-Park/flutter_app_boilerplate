@@ -6,6 +6,7 @@ class Routes {
   static String root = '/';
   static String login = 'login';
   static String setting = 'setting';
+  static String search = 'search';
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
@@ -15,5 +16,6 @@ class Routes {
     router.define(root, handler: rootHandler);
     router.define(login, handler: loginHandler);
     router.define(setting, handler: settingHandler);
+    router.define(search, handler: searchHandler);
   }
 }

@@ -33,7 +33,7 @@ class _LoginMobile extends StatelessWidget {
   Container _buildAboveContainer(double blockWidth, double gridHeight) {
     return Container(
       width: blockWidth,
-      height: gridHeight * 8,
+      height: gridHeight * 6,
       child: Placeholder(),
     );
   }
@@ -50,8 +50,15 @@ class _LoginMobile extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
             ),
           ),
-          SizedBox(height: 16.0),
+          SizedBox(height: 32.0),
           _buildSocialLoginRow(context),
+          SizedBox(height: 32.0),
+          FittedBox(
+            child: FlatButton(
+              child: Text('Or with an Email.'),
+              onPressed: () {},
+            ),
+          ),
         ],
       ),
     );
@@ -62,7 +69,6 @@ class _LoginMobile extends StatelessWidget {
     final VoidCallback onTap = () {
       Navigator.pushReplacementNamed(context, '/');
     };
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[

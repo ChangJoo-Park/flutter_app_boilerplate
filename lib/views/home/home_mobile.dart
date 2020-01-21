@@ -26,7 +26,6 @@ class __HomeMobileState extends State<_HomeMobile> {
         child: NestedScrollView(
           controller: _scrollViewController,
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            _log.d('innerBoxIsScrolled -> $innerBoxIsScrolled');
             return <Widget>[
               _buildSliverAppBar(),
             ];
@@ -34,6 +33,7 @@ class __HomeMobileState extends State<_HomeMobile> {
           body: Container(),
         ),
       ),
+      bottomNavigationBar: _buildBottomNavigationBar(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.bug_report),
         onPressed: () {
@@ -43,24 +43,48 @@ class __HomeMobileState extends State<_HomeMobile> {
       ),
     );
   }
-}
 
-SliverAppBar _buildSliverAppBar() {
-  return SliverAppBar(
-    stretch: false,
-    floating: false,
-    pinned: false,
-    title: Text(
-      'My App',
-      style: TextStyle(
-        fontSize: 20.0,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    actions: <Widget>[
-      IconButton(icon: Icon(Icons.search), onPressed: () {}),
-      IconButton(icon: Icon(Icons.settings), onPressed: () {}),
-      IconButton(icon: Icon(Icons.notifications_none), onPressed: () {}),
-    ],
-  );
+  SliverAppBar _buildSliverAppBar() {
+    return SliverAppBar(
+      stretch: false,
+      floating: false,
+      pinned: false,
+      title: Text('My App'),
+      actions: <Widget>[
+        IconButton(icon: Icon(Icons.search), onPressed: () {}),
+        IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              Navigator.of(context).pushNamed('setting');
+            }),
+        IconButton(icon: Icon(Icons.notifications_none), onPressed: () {}),
+      ],
+    );
+  }
+
+  BottomNavigationBar _buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+            icon: Icon(Icons.home, color: Colors.black),
+            title: Text('홈', style: TextStyle(color: Colors.black))),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.menu, color: Colors.grey),
+            title: Text('카테고리', style: TextStyle(color: Colors.grey))),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.create, color: Colors.grey),
+            title: Text('글쓰기', style: TextStyle(color: Colors.grey))),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.favorite, color: Colors.grey),
+            title: Text('알림', style: TextStyle(color: Colors.grey))),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.person, color: Colors.grey),
+            title: Text('프로필', style: TextStyle(color: Colors.grey))),
+      ],
+      type: BottomNavigationBarType.fixed,
+      currentIndex: 0,
+      fixedColor: Colors.black,
+      onTap: (int index) {},
+    );
+  }
 }

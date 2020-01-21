@@ -18,6 +18,6 @@ class Routes {
     router.define(login, handler: loginHandler);
     router.define(setting, handler: settingHandler);
     router.define(search, handler: searchHandler);
-    router.define(notification, handler: notificationhHandler);
+    router.define(notification, handler: notificationHandler);
   }
 }
